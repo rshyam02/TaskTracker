@@ -1,0 +1,204 @@
+/* .addtaskfield{
+    border: 0;
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 0px;
+    /* margin-left: 300px; 
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.addtasktitle{
+   
+   
+    margin-top: 10px;
+    margin-left: 300px;
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.taskaddcontainer{
+    background-color:darkslategray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color:  darkslategrey;
+
+}
+.submitbutton{
+    align-items: center;
+    height: 50px;
+    font-size: 25px;
+    justify-content: center;
+    margin-left: 400px;
+    display: flex;
+    margin-bottom: 30px;
+    background-color:whitesmoke ;
+}
+.status{
+
+    align-items: center;
+    justify-content: center;
+    margin-left: 380px;
+} */
+  /* Reset margins and paddings for all elements */
+
+   
+  .taskaddcontainer body {
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+   
+ 
+  .taskaddcontainer {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 2000px;
+    width: 100vw;  
+    display: flex;
+    flex-direction: column; 
+    
+    /* align-items: center; */
+    text-align: center;
+  }
+   
+ 
+  .taskaddcontainer .addtasktitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+
+  }
+   
+  .taskaddcontainer .addtaskfield {
+    
+    width: 500px;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  .taskaddcontainer .rowcontainer{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .taskaddcontainer .prioritymenu{
+    background-color: white;
+    text-align: center;
+    height: 45px;
+    width: 150px;
+    align-content: center;
+  }
+  .taskaddcontainer .dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .taskaddcontainer  .priorityselector{
+    height: 45px;
+    width: 100px;
+    align-content: center;
+    font-size: 15px;
+    margin-right: 10px;
+
+  }
+  .taskaddcontainer .submitbutton {
+    width: 200px;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+   
+  .taskaddcontainer .submitbutton:hover {
+    background-color: #45a049;
+  }
+  .taskaddcontainer .datetime_label{
+    align-content: center;
+    background-color: white;
+    height: 45px;
+    width: 200px;
+
+  }
+  .taskaddcontainer .datetime_input{
+    align-content: center;
+    height: 45px;
+    width: 200px;
+  }
+   
+  .taskaddcontainer .status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #e7f4e7;
+    width: 100%;
+    text-align: center;
+  }
+   
+  /* Media Queries for responsiveness */
+  /* @media (max-width: 768px) {
+    .taskaddcontainer {
+      padding: 15px;
+    }
+   
+    .addtasktitle {
+      font-size: 20px;
+    }
+   
+    .addtaskfield, .submitbutton {
+      font-size: 14px;
+    }
+  }
+   
+  @media (max-width: 480px) {
+    .taskaddcontainer {
+      padding: 10px;
+    }
+   
+    .addtasktitle {
+      font-size: 18px;
+    }
+   
+    .addtaskfield, .submitbutton {
+      font-size: 12px;
+    }
+  }
+    */

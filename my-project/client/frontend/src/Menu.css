@@ -1,0 +1,167 @@
+/*
+*{
+    margin:0;
+    padding:0;
+    margin-top: 10px;
+ 
+}
+ 
+.menu{
+    background-color: purple;
+    /* padding: 10px;
+    width: 100%;
+    padding-top: 15px;
+    margin-left: 0px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+   
+    justify-content: center;
+}
+.menu li{
+    flex:1;
+    text-align:center;
+}
+.menu a{
+    color: silver;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu a:hover{
+    text-decoration: underline;
+    color:gold;
+    border-radius: 5px;
+} */
+ 
+/* Sidebar styles */
+.Menudiv .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color:rgb(206, 222, 230);
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.8s ease-in-out;
+}
+.Menudiv .sidebar.open{
+    left: 0;
+}
+.Menudiv h1{
+    color: whitesmoke;
+}
+ 
+.Menudiv .hamburger_icon{
+    height: 60px;
+    width: 60px;
+    top:0;
+    margin-top: 10px;
+    margin-left: 20px;
+    left: 15px;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color:lightseagreen ;
+    border: none;
+    border-radius: 20px;
+   
+}
+.Menudiv .hamimage{
+    left: 0;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+}
+ 
+.Menudiv .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+ 
+.Menudiv .sidebar ul li {
+    padding: 10px 15px;
+}
+ 
+.Menudiv .sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 20px;
+}
+ 
+.Menudiv .sidebar ul li a:hover {
+    background-color: #575757;
+}
+ 
+ 
+/* .Menudiv .content {
+    margin-left: 100px;
+    padding: 20px;
+} */
+ 
+.Menudiv .content.shifted{
+    margin-left: 250px;
+}
+.website1-title{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-left: 1000px;
+ 
+   
+}
+.pp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkgreen;
+}
+ 
+.Menudiv body{
+    display: flex;
+    justify-content: center;
+ 
+    align-items: center;
+}
+.taskstatus{
+    background-color: lightblue;
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 300px;
+}
+.totaltask{
+    color:darkgreen;
+    font-size: 22px;
+}
+.completed{
+    color:forestgreen;
+    font-size: 20px;
+}
+.notcompleted{
+    color:orangered;
+    font-size: 20px
+}
+.highpriority{
+    color:red;
+    font-size: 20px;
+ 
+}
+.lowpriority{
+    color:crimson;
+    font-size: 20px;
+}
+ 
+ 

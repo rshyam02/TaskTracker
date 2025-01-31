@@ -1,0 +1,62 @@
+.tasklistdiv{
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.tasklistdiv .titletext{
+  color: white;
+  font-size: 30px;
+}
+/* .tasklistdiv body{
+    /* height: 100vh;
+    margin-top:10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+.tasktable{
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+.tasktable td:hover{
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+
+.tasktable th
+{
+  padding: 8px;
+  text-align: center;
+  background-color: aliceblue;
+  border:1px solid white;
+
+}
+
+.tasktable td{
+  padding: 8px;
+  text-align: left;
+  background-color: aliceblue;
+  box-shadow: 2px 2px 5px grey;
+  
+}
+.edittaskbtn{
+  width: 200px;
+    padding: 12px;
+    font-size: 16px;
+  margin-top: 30px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.edittaskbtn:hover{
+  background-color:#45a049 ;
+}

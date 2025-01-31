@@ -1,0 +1,22 @@
+.deletetaskbutton{
+    background-color: #4CAF50;
+    width: 70px;
+    height: 20px;
+    font-size:15px;
+    border: none;
+    color: white;
+
+    transition: background-color 0.3s ease;
+
+  }
+  .deletediv{
+    width: 80%;
+    background-color: white;
+  }
+  
+  .deletetaskbutton:hover{
+    background-color:red;
+  }
+
+  
+  

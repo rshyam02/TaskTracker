@@ -1,0 +1,36 @@
+body{
+    
+    background-image: url('D:\my-project\my-project\client\frontend\images\Media (6).jpg');
+    background-size: cover;
+}
+.home .tasktable{
+    width: 80%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    
+    
+  }
+.home.tasktable td:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+  }
+  
+  
+.home .tasktable th
+  {
+    padding: 8px;
+    text-align: center;
+    background-color: lightblue;
+    border:1px solid white;
+  
+  }
+  
+.home .tasktable td{
+    padding: 8px;
+    text-align: left;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px grey;
+    
+  }
+
+  
