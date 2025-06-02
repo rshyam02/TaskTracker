@@ -7,83 +7,83 @@ A full-stack To-Do List web application built with React.js on the frontend and 
  
 🚀 Features
  
-✅ Add new tasks
- 
-📝 Edit existing tasks
- 
-❌ Delete tasks
- 
-🎯 Mark tasks as complete/incomplete
-
-‼️ Task prioritization
- 
-📦 Persistent storage with a backend API
- 
-💡 Clean, responsive UI using React
+   ✅ Add new tasks
+    
+   📝 Edit existing tasks
+    
+   ❌ Delete tasks
+    
+   🎯 Mark tasks as complete/incomplete
+   
+   ‼️ Task prioritization
+       
+   📦 Persistent storage with a backend API
+    
+   💡 Clean, responsive UI using React
  
 🛠 Tech Stack
  
-Frontend:
- 
-React.js
- 
-Axios (for API requests)
- 
-HTML CSS 
- 
-Backend:
- 
-Node.js
- 
-Express.js
- 
-MongoDB 
- 
-Mongoose 
+  Frontend:
+   
+   React.js
+    
+   Axios (for API requests)
+    
+   HTML CSS 
+   
+ Backend:
+   
+  Node.js
+   
+  Express.js
+   
+  MongoDB 
+   
+  Mongoose 
 
   
 📂 Project Structure
  
-/client         → React frontend  
-/server         → Node.js + Express backend
+  /client/frontend         → React frontend  
+  /server/backend         → Node.js + Express backend
  
 ⚙️ Installation & Setup
  
-1. Clone the repository
+  1. Clone the repository
+   
+   git clone https://github.com/rshyam/to-do-app.git
+   cd to-do-app
+    
+   2. Install dependencies
+   
+  Backend
+   
+   cd server
+   npm install
+   
+  Frontend
  
-git clone https://github.com/rshyam/to-do-app.git
-cd to-do-app
+   cd ../client
+   npm install
+   
+  3. Configure Environment Variables
+   
+   Create a .env file in the server folder and set:
+   
+  PORT=5000
+  DB_URI=mongodb://localhost:27017/admin
+   
+ 4. Run the app
+   
+   Backend
+   
+   cd server/backend
+   node server.js
  
-2. Install dependencies
+  Frontend
  
-Backend
- 
-cd server
-npm install
- 
-Frontend
- 
-cd ../client
-npm install
- 
-3. Configure Environment Variables
- 
-Create a .env file in the server folder and set:
- 
-PORT=5000
-DB_URI=mongodb://localhost:27017/to-do-list  
- 
-4. Run the app
- 
-Backend
- 
-cd server
-npm start
- 
-Frontend
- 
-cd client
-npm start
+   cd client/frontend
+   npm start
  
 The frontend will run on http://localhost:3000 and the backend on http://localhost:5000.
  
