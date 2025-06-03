@@ -23,7 +23,7 @@ _**🚀 FEATURES**_
  
 **🛠 TECH STACK**
  
-_ ** Frontend:**_
+  _FRONTEND:_
    
    React.js
     
@@ -31,7 +31,7 @@ _ ** Frontend:**_
     
    HTML CSS 
    
-_** Backend:**_
+ _BACKEND:_
    
   Node.js
    
@@ -42,12 +42,12 @@ _** Backend:**_
   Mongoose 
 
   
-📂** Project Structure**
+**📂 Project Structure**
  
   /client/frontend         → React frontend  
   /server/backend         → Node.js + Express backend
  
-⚙️ **Installation & Setup**
+**⚙️ Installation & Setup**
  
  _ 1. _Clone the repository__
    
