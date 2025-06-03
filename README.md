@@ -23,7 +23,7 @@ _**🚀 FEATURES**_
  
 **🛠 TECH STACK**
  
-  _FRONTEND:_
+  **_FRONTEND:_**
    
    React.js
     
@@ -31,7 +31,7 @@ _**🚀 FEATURES**_
     
    HTML CSS 
    
- _BACKEND:_
+ **_BACKEND:_**
    
   Node.js
    
