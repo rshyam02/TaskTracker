@@ -1,5 +1,5 @@
 
-📝 To-Do List Application
+**📝 Task Tracker Application**
 
 💻Project Deployment Link: https://gleeful-zuccutto-249b07.netlify.app/ (Currently There are no Login Credentials, Wait for some time after pressing Submit button)
  
