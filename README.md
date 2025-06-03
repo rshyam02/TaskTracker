@@ -5,7 +5,7 @@
  
 A full-stack To-Do List web application built with React.js on the frontend and Node.js with Express on the backend. This app allows users to add, edit, delete, and mark tasks as completed in an intuitive and responsive interface.
  
-🚀 Features
+**🚀 Features**
  
    ✅ Add new tasks
     
