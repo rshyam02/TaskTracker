@@ -98,7 +98,7 @@ Due dates and reminders
 Drag-and-drop task ordering
  
  
-🤝 Contributing
+**🤝 CONTRIBUTING**
  
 Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
  
