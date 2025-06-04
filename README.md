@@ -1,7 +1,7 @@
 
 **📝 Task Tracker Application**
 
-💻Project Deployment Link: https://gleeful-zuccutto-249b07.netlify.app/ (Currently There are no Login Credentials, Wait for some time after pressing Submit button)
+💻Project Deployment Link: https://gleeful-zuccutto-249b07.netlify.app/ (Currently There are no Login Credentials, Please press submit button two or three times as it takes time to connect with the database)
  
 A full-stack To-Do List web application built with React.js on the frontend and Node.js with Express on the backend. This app allows users to add, edit, delete, and mark tasks as completed in an intuitive and responsive interface.
  
