@@ -33,7 +33,7 @@
 
 .tasktable th
 {
-  padding: 8px;
+  padding: 20px 20px; 
   text-align: center;
   background-color: rgb(181, 225, 238);
   border:1px solid white;
@@ -41,7 +41,7 @@
 }
 
 .tasktable td{
-  padding: 8px;
+  padding: 20px 20px; 
   text-align: left;
   background-color: aliceblue;
   box-shadow: 2px 2px 5px grey;

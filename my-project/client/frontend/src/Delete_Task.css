@@ -17,6 +17,12 @@
   .deletetaskbutton:hover{
     background-color:red;
   }
+.delete-message {
+  color: green;
+  font-size: 16px;
+  margin: 10px 0;
+  text-align: center;
+}
 
   
   

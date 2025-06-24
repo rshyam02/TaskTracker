@@ -1,6 +1,7 @@
 import {React,useEffect,useState} from "react";
 import './Delete_Task.css';
 const Delete_Task=()=>{
+    const [deleteStatus, setDeleteStatus] = useState('');
     const [tasks,setTask]=useState([]);
     const gettask=()=>{
         fetch('http://localhost:5000/tasks')
@@ -16,7 +17,11 @@ const Delete_Task=()=>{
 
         })
         .then(response=>response.json())
-        .then(data=>{console.log(data.message); gettask();})
+        .then(data=>{console.log(data.message); gettask();
+          setDeleteStatus('Task deleted successfully!');
+        }
+          
+        )
         
         .catch(err=>console.log("error fetching tasks:",err));
         
@@ -62,6 +67,8 @@ const Delete_Task=()=>{
                   </tr>}
               </tbody>
             </table>
+            {deleteStatus && <div className="delete-message">{deleteStatus}</div>}
+
             
             {/* <ul>
                 {tasks.map((task,index)=>{

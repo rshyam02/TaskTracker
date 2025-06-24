@@ -15,8 +15,8 @@ function App() {
     // <Login></Login>
     <Router>
       <Routes>
-        <Route path="/" Component={Login}></Route>
-        <Route path="/Home" Component={Home}></Route>
+        <Route path="/" Component={Home}></Route>
+        
         <Route path="/Task_List" Component={Task_List}></Route>
         <Route path="/Add_Task" Component={Add_Task}></Route>
         <Route path="/Delete_Task" Component={Delete_Task}></Route>

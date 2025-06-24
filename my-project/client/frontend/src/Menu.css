@@ -77,8 +77,8 @@
 .Menudiv .hamimage{
     left: 0;
     align-items: center;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 50px;
 }
  
 .Menudiv .sidebar ul {
@@ -135,33 +135,83 @@
     background-color: lightblue;
     display: flex;
     height: 150px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    width: 300px;
+    width: 100%;
     margin-right: 300px;
+    gap:20px;
 }
 .totaltask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px; 
+    
     color:darkgreen;
     font-size: 22px;
+    height:120px;
+    border: 1px solid darkgreen ;
+    border-radius: 10px;
 }
 .completed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px; 
+    
     color:forestgreen;
     font-size: 20px;
+    height:120px;
+    border: 1px solid forestgreen ;
+    border-radius: 10px;
 }
 .notcompleted{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px; 
+    
     color:orangered;
-    font-size: 20px
+    font-size: 20px;
+    height:120px;
+    border: 1px solid orangered ;
+    border-radius: 10px;
 }
 .highpriority{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px; 
+  
     color:red;
     font-size: 20px;
+     height:120px;
+    border: 1px solid red ;
+    border-radius: 10px;
  
 }
 .lowpriority{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 200px; 
     color:crimson;
     font-size: 20px;
+    height:120px;
+    border: 1px solid crimson ;
+    border-radius: 10px;
 }
  
  
