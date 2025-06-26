@@ -86,8 +86,13 @@ npm start
 The frontend will run on http://localhost:3000 and the backend on http://localhost:5000.
  
 📸 Screenshots
- 
+1. Home page
 ![image](https://github.com/user-attachments/assets/474ce6fe-2bf0-4123-8ec8-4fa0a5c7cade)
+
+2. Update task
+
+![image](https://github.com/user-attachments/assets/51e04e67-7482-4921-8555-195500756f85)
+
 
  
 📌 Future Improvements
