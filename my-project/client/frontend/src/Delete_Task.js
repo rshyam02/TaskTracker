@@ -12,7 +12,7 @@ const Delete_Task=()=>{
         .catch(err=>console.log("error fetcing:",err));
     };
     const deletetask=(taskid)=>{
-        fetch(`http://localhost:5000/tasks/${taskid}`,{
+        fetch(`https://tasktracker-2ltg.onrender.com/tasks/${taskid}`,{
           method: 'DELETE'
 
         })
