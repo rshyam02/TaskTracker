@@ -16,7 +16,7 @@ const Edit_Task=()=>{
     const [selectedtaskid,settaskid]=useState(null);
     const gettask=()=>{
 
-        fetch('http://localhost:5000/tasks')
+        fetch('https://tasktracker-2ltg.onrender.com/tasks')
         .then(response=>response.json())
         .then(data=>{
             setTask(data);
