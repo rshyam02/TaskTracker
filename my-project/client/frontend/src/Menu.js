@@ -32,7 +32,7 @@ const Menu=({name,pass})=>{
  
     })
     const status=()=>{
-        fetch('http://localhost:5000/taskstatus')
+        fetch('https://tasktracker-2ltg.onrender.com/taskstatus')
         .then(response=>response.json())
         .then(data=>{
             console.log("recieved data");
