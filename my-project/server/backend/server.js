@@ -18,7 +18,7 @@ const port = process.env.PORT || 5000;
 
 
  
-app.use(cors());
+app.use(cors({ origin: "https://graceful-klepon-e45545.netlify.app" }));
  
 app.use(bodyParser.json());
 
