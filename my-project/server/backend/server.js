@@ -2,14 +2,19 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const jwt=require("jsonwebtoken");
 const {authentication} = require('./login_authentication');
 const {taskrecievedstatus} = require('./getusertask');
  const {printtask}= require('./printtasklist'); 
  const {deletetask}= require('./deletetask');
 const { ReturnDocument } = require('mongodb');
+const {registeration}=require("./registeration.js");
 const {updatetask}= require('./update.js');
 const {updatestatus}= require('./updatestatus.js');
 const {taskinfo}=require('./taskinfo.js');
+const { JsonWebTokenError } = require('jsonwebtoken');
+const {profile}=require("./profile.js");
+
 
 dotenv.config();
  
@@ -18,17 +23,23 @@ const port = process.env.PORT || 5000;
 
 
  
-app.use(cors({ origin: "https://graceful-klepon-e45545.netlify.app" }));
+app.use(cors());
+app.use(express.json());  
+
  
 app.use(bodyParser.json());
 
 
  
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  console.log(password);
-  const result = authentication(username, password);
-  res.status(200).send("Login successful");
+app.post('/login',async(req, res) => {
+  const { username,password} = req.body;
+  const token=await authentication(username,password);
+  if(token){
+    res.json({message:"Login successful",token});
+  }
+  else{
+    res.json({error:"username or password incorrect"});
+  }
  
   // try {
   //   // Call authenticateUser function from auth.js
@@ -38,24 +49,70 @@ app.post('/login', (req, res) => {
   //   res.status(400).json({ message: error.message });
   // }
 });
+const authMiddleware=(req,res,next)=>{
+  const token=req.headers["authorization"];
+  if(!token){
+    return res.json({error:"token missing"});
+  }
+  jwt.verify(token,"secret123",(err,decoded)=>{
+    if(err){
+      return res.json({error:"invalid token"});
+    }
+    req.user=decoded;
+    next();
+  })  
+}
 
-app.post('/taskname',(req,res)=>{
-    
-  const {taskname,priority,datetime}=req.body;
-  // console.log(taskname);
-  const tasknamestatus=taskrecievedstatus(taskname,priority,datetime);
+app.get("/profile",authMiddleware,async(req,res)=>{
+  const userid=await req.user.id;
+  const user=profile(userid);
+  res.json({username:user.username});
+
   
+
+});
+app.post("/register",async(req,res)=>{
+  const {username,password}=req.body;
+  const registerstatus=await registeration(username,password);
+  if(registerstatus=="username already present"){
+    res.status(409).json({ error: "username already present" });
+
+  }
+  else{
+    res.status(201).json({ message: "registered successfully" });
+
+  }
+})
+
+app.post('/taskname', async (req, res) => {
+
+  console.log("REQUEST BODY:", req.body);   
+
+  const { username, taskname, priority, datetime } = req.body;
+
+  const tasknamestatus = await taskrecievedstatus(
+    username,
+    taskname,
+    priority,
+    datetime
+  );
+
   res.status(200).send(tasknamestatus);
-  
 });
 
-app.get('/tasks',async(req,res)=>{
-  const gettask= await printtask();
+app.post('/tasks',async(req,res)=>{
+  const username=req.body.username;
+  console.log(username);
+  const gettask= await printtask(username);
   if(gettask=="error fetching task:"){
     res.status(500).send("error fetching");
   }
-  console.log(gettask);
-  res.status(200).json(gettask);
+  else{
+    console.log(gettask);
+    res.status(200).json(gettask);
+
+  }
+  
   
 });
 app.delete("/tasks/:id",async(req,res)=>{
@@ -99,8 +156,9 @@ app.put("/taskstatus/:id",async(req,res)=>{
 })
 
  
-app.get("/taskstatus",async(req,res)=>{
-  const {high_priority,low_priority,completed,not_completed,total_task}=await taskinfo();
+app.post("/taskstatus",async(req,res)=>{
+  const username=req.body.username;
+  const {high_priority,low_priority,completed,not_completed,total_task}=await taskinfo(username);
   res.json({high_priority,low_priority,completed,not_completed,total_task});
  
  
