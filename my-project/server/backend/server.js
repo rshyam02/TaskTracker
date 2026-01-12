@@ -23,7 +23,16 @@ const port = process.env.PORT || 5000;
 
 
  
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://timely-queijadas-2012e2.netlify.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 app.use(express.json());  
 
  
@@ -31,24 +40,20 @@ app.use(bodyParser.json());
 
 
  
-app.post('/login',async(req, res) => {
-  const { username,password} = req.body;
-  const token=await authentication(username,password);
-  if(token){
-    res.json({message:"Login successful",token});
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const token = await authentication(username, password);
+    if (!token) {
+      return res.status(401).json({ error: "username or password incorrect" });
+    }
+    res.status(200).json({message: "Login successful",token});
+
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
   }
-  else{
-    res.json({error:"username or password incorrect"});
-  }
- 
-  // try {
-  //   // Call authenticateUser function from auth.js
-  //   const result = authentication(username, password);
-  //   res.json({ message: result});
-  // } catch (error) {
-  //   res.status(400).json({ message: error.message });
-  // }
 });
+
 const authMiddleware=(req,res,next)=>{
   const token=req.headers["authorization"];
   if(!token){
