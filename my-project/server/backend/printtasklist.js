@@ -11,6 +11,7 @@ mongoose.connect(mongouri,{useNewUrlParser:true,useUnifiedTopology:true,serverSe
     .catch((err)=>console.log("mongodb connection error "+err));
 
 const taskschema=new mongoose.Schema({
+    username:String,
     taskname: String,
     priority: String,
     datetime: String,
@@ -18,9 +19,13 @@ const taskschema=new mongoose.Schema({
     
 });
 const task= mongoose.models.Task || mongoose.model("Task",taskschema);
-const printtask=async(req,res)=>{
+const printtask=async(username)=>{
+    
     try{
-        const tasks= await task.find();
+        console.log(username);
+        const tasks= await task.find({username});
+        console.log("TASK");
+        console.log(tasks);
         return tasks;
     }
     catch(err){
