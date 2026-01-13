@@ -6,12 +6,13 @@ const mongoose= require("mongoose");
 const mongouri = "mongodb+srv://shyam:shyam02@cluster0.vojjf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
-mongoose.connect(mongouri,{useNewUrlParser:true,useUnifiedTopology:true,serverSelectionTimeoutMS: 30000,  // Set 30 seconds timeout for initial connection
+mongoose.connect(mongouri,{useNewUrlParser:true,useUnifiedTopology:true,serverSelectionTimeoutMS: 30000,  
     socketTimeoutMS: 60000,})
     .then(()=>console.log("mongodb connected successfully"))
     .catch((err)=>console.log("mongodb connection error "+err));
  
 const taskschema=new mongoose.Schema({
+    username:String,
     taskname: String,
     priority: String,
     datetime: String,
@@ -21,13 +22,13 @@ const taskschema=new mongoose.Schema({
 });
 const task= mongoose.models.Task || mongoose.model("Task",taskschema);
  
-const taskinfo=async(req,res)=>{
+const taskinfo=async(username)=>{
     let high_priority=0,completed=0,not_completed=0,low_priority=0,total_task=0;
-    total_task=await task.countDocuments();
-    high_priority= await task.countDocuments({priority:'high'});
-    low_priority=  await task.countDocuments({priority:'low'});
-    completed= await task.countDocuments({status:true});
-    not_completed= await task.countDocuments({status:false});
+    total_task=await task.countDocuments({username:username});
+    high_priority= await task.countDocuments({username:username, priority:'high'});
+    low_priority=  await task.countDocuments({username:username,priority:'low'});
+    completed= await task.countDocuments({username:username,status:true});
+    not_completed= await task.countDocuments({username:username,status:false});
  
     const tasks= await task.find();
  
