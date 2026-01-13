@@ -27,7 +27,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:3000",
-    "https://graceful-strudel-d1181c.netlify.app/"
+    "https://timely-queijadas-2012e2.netlify.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
