@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 
 
  
-app.post('https://task-app-1-huue.onrender.com/login', async (req, res) => {
+app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   try {
     const token = await authentication(username, password);
@@ -76,7 +76,7 @@ app.get("/profile",authMiddleware,async(req,res)=>{
   
 
 });
-app.post("https://task-app-1-huue.onrender.com/register",async(req,res)=>{
+app.post("/register",async(req,res)=>{
   const {username,password}=req.body;
   const registerstatus=await registeration(username,password);
   if(registerstatus=="username already present"){
