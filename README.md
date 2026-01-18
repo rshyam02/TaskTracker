@@ -92,13 +92,19 @@ The frontend will run on http://localhost:3000 and the backend on http://localho
 📸 Screenshots
 
 1. Login and registeration page
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f529597c-ef49-4cd1-aa0a-6ed559bd8c26" />
+<img width="1908" height="850" alt="image" src="https://github.com/user-attachments/assets/529349a3-fc5e-4f31-ad38-4b9a3b1ce9c3" />
 <img width="1907" height="861" alt="image" src="https://github.com/user-attachments/assets/cc7ac269-80d5-4108-93da-eca41ffde42a" />
 
 2. Home page
-![image](https://github.com/user-attachments/assets/474ce6fe-2bf0-4123-8ec8-4fa0a5c7cade)
+<img width="1860" height="843" alt="image" src="https://github.com/user-attachments/assets/a69e39cc-1dd4-4590-a39c-5118a81117e6" />
 
-2. Update task
+3. New task adding page
+ <img width="1906" height="838" alt="image" src="https://github.com/user-attachments/assets/0f58e281-4da0-438f-84eb-e8dc9e01d6be" />
+
+4. Update task page
+<img width="1869" height="836" alt="image" src="https://github.com/user-attachments/assets/c4cb9a42-5f03-4090-966f-d8a08f317de2" />
+
+
 
 ![image](https://github.com/user-attachments/assets/51e04e67-7482-4921-8555-195500756f85)
 
