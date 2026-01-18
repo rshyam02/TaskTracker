@@ -90,7 +90,12 @@ npm start
 The frontend will run on http://localhost:3000 and the backend on http://localhost:5000.
  
 📸 Screenshots
-1. Home page
+
+1. Login and registeration page
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f529597c-ef49-4cd1-aa0a-6ed559bd8c26" />
+<img width="1907" height="861" alt="image" src="https://github.com/user-attachments/assets/cc7ac269-80d5-4108-93da-eca41ffde42a" />
+
+2. Home page
 ![image](https://github.com/user-attachments/assets/474ce6fe-2bf0-4123-8ec8-4fa0a5c7cade)
 
 2. Update task
