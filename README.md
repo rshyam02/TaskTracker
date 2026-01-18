@@ -106,8 +106,6 @@ The frontend will run on http://localhost:3000 and the backend on http://localho
 
 
 
-![image](https://github.com/user-attachments/assets/51e04e67-7482-4921-8555-195500756f85)
-
 
  
 📌 Future Improvements
