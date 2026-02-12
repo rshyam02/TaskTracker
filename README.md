@@ -1,7 +1,7 @@
 
 📝 Work tracker Application
  
-A full-stack To-Do List web application built with React.js on the frontend and Node.js with Express on the backend. This app allows users to add, edit, delete, and mark tasks as completed in an intuitive and responsive interface.
+A full-stack Work tracker web application built with React.js on the frontend and Node.js with Express on the backend. This app allows users to add, edit, delete, and mark tasks as completed in an intuitive and responsive interface.
 
 Live deployement link: https://playful-sundae-0c29bc.netlify.app/
 username: shyam 
@@ -9,15 +9,15 @@ password: shyam
  
 🚀 Features
  
-✅ Add new tasks
+✅ Add new works
  
-📝 Edit existing tasks
+📝 Edit existing works
  
-❌ Delete tasks
+❌ Delete works
  
-🎯 Mark tasks as complete/incomplete
+🎯 Mark works as complete/incomplete
 
-  Task prioritization
+  Work prioritization
  
 📦 Persistent storage with a backend API
  
